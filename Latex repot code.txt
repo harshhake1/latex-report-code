@@ -1,0 +1,698 @@
+%...................first page.........................!!!!!!!
+
+
+\documentclass[ 12pt,a4paper,twocolumn,fleqn]{article}
+\usepackage{graphicx}
+\usepackage[a4paper,top=20mm, bottom=30mm, left=10mm, right=25mm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage[]{algorithm2e}
+\usepackage{color}
+\usepackage{fancybox}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\pagestyle{fancy}
+\usepackage{lineno}
+\usepackage{xtab,booktabs}
+\usepackage{setspace} 	
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\setlength\columnsep{25pt}
+\makeatletter
+\g@addto@macro{\normalsize}{%
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}}
+\makeatother
+\mathindent=0.0pt
+\usepackage{float}
+\renewcommand{\baselinestretch}{1.5}
+\begin{document}
+%\lhead{Cloud Based Exam Portal}
+\chead{}
+%\rhead{Team Members, Batch Number here}
+\renewcommand{\headrulewidth}{0pt}
+\pagenumbering{gobble} 
+\fancyhf{}
+\onecolumn
+\begin{center}
+\text{A Design report on Project Phase-I} \\
+\smallskip
+\textcolor{red}{\LARGE{Cloud Based Exam Portal}} \\
+\large{\textbf{Bachelor of Technology}} \\
+\large{in} \\
+\large{Computer Science and Engineering} \\
+%\textcolor{blue}{\LARGE{Fabtech College of Engineering \& Research}} \\
+\vspace{5mm}
+\includegraphics[scale=1.5]{ftclogo.png} \\
+\textit{Submitted By} \\
+\begin{tabular}{l l}
+\textbf{Chougule Akshay Vitthal} & \textbf{1967561242031} \\
+\textbf{Madane Shankar Ramchandra} & \textbf{1967561242036} \\
+\textbf{Jundale Anjali Rajaram} & \textbf{2067561242012} \\
+\textbf{Mule Omkar Shankar} & \textbf{1967561242027} \\
+\end{tabular}
+\hfill\\
+\vspace{5mm}
+\textit{Under the guidance of} \\
+\textbf{Prof.Raut S.M }\\
+\Large{\textbf{2022-2023}} \\
+\textcolor{blue}{\Large{Department of Computer Science and Engineering}} \\
+\textcolor{blue}{\Large{Fabtech College of Engineering \& Research, Sangola.}} \\
+\textcolor{blue}{\Large{Dr. Babasaheb Ambedkar Technological University, Lonere}}\\
+
+\end{center}
+\newpage
+
+
+
+
+%.................certificate Page........................!!!!!!
+
+
+
+
+
+  \pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\begin{center}
+\textcolor{red}{\LARGE{Dr. Babasaheb Ambedkar Technological University, Lonere}} \\
+\vspace{5mm}
+\textcolor{red}{\LARGE{Fabtech College of Engineering \& Research, Sangola.}} \\
+
+\begin{flushleft}
+\textcolor{blue}{\LARGE{\textbf{Department of Computer Science \& Engineering}}} \\
+\end{flushleft}
+\includegraphics[scale=1.5]{ftclogo.png} \\
+\Large{\underline{\textbf{CERTIFICATE}}} \\
+  \end{center}
+  
+\normalsize
+This is to certify that the project entitled \textbf{Cloud Based Exam Portal} is a bonafide work carried out by \textbf{Chougule Akshay Vitthal [1967561242031]}, \textbf{Madane Shankar Ramchandra [1967561242036]}, \textbf{Jundale Anjali Rajaram [2067561242012]}, \textbf{Mule Omkar Shankar [1967561242027]} in partial fulfillment of 7th semester, Bachelor of Engineering in Computer Science and Engineering under Fabtech College of Engineering \& Research, Sangola during the year 2022-23. \\
+\\
+\\
+\\
+\begin{tabular}{c c c c}
+\textbf{Prof.Raut S.M} & \textbf{Prof.Shetake M.R} & \textbf{abc ndndndn} & \textbf{Dr. Shendge R.B.}\\
+\text{Internal Guide} & \text{Project Co-ordinator} & \text{HOD} & \text{Principal}\\
+
+\\\\
+\end{tabular}
+\text{Examiner:}
+\hfill
+\\
+\text{......................................................................................................................................................}
+
+\newpage
+
+
+
+
+
+%..................Acknowledgement Page................!!!!!!!!!!
+
+
+
+
+
+  \pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\begin{center}
+\Large{\underline{\textbf{Acknowledgement}}}
+\end{center}
+\normalsize
+We are pleased to have partial completed the project \textbf{Cloud Based Exam Portal}. We thoroughly enjoyed the process of working on this project and gained a lot of knowledge doing so.
+\\
+\hfill
+\\
+We would like to take this opportunity to express our gratitude to \textbf{Dr. Shendge R.B.}, Principal of FTC, for permitting us to utilize all the necessary facilities of the institution.
+\\
+\hfill
+\\
+We also thank our respected HOD of Computer Science \& Engineering, FTC, Sangola,\textbf{ab cbcbbccb}, for his support and encouragement throughout the process.
+\\
+\hfill
+\\
+We are immensely grateful to our respected and learned guide, \textbf{Prof.Raut S.M}, Professor CSE, FTC and our project co-ordinator \textbf{Prof.Shetake M.R}, Professor, CSE, FTC for their valuable help and guidance. We are indebted to them for their invaluable guidance throughout the process and their useful inputs at all stages of the process.
+\\
+\hfill
+\\
+We also thank all the faculty and support staff of Department of Computer Science, FTC. Without their support over the years, this work would not have been possible.
+\\
+\hfill
+\\
+
+\\
+\hfill
+\\
+\begin{flushright}
+\begin{center}{ }
+\textbf{Chougule Akshay Vitthal} & \textbf{1967561242031} \\
+\textbf{Madane Shankar Ramchandra} & \textbf{1967561242036} \\
+\textbf{Jundale Anjali Rajaram} & \textbf{2067561242012} \\
+\textbf{Mule Omkar Shankar} & \textbf{1967561242027} \\
+\end{center}
+\end{flushright}
+
+\newpage
+
+
+
+
+
+
+%.....................Abstract page.................!!!!!!!!!
+
+
+
+
+
+
+  \pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\setstretch{1.5}
+\twocolumn[
+\begin{@twocolumnfalse}
+\title {Cloud Based Exam Portal}
+% \author
+% \maketitle
+\begin{center}
+\Large{\textbf{Abstract}}\\
+
+\end{center}
+
+This Online Examination System is a software solution, which allows any industry or institute to arrange, conduct and manage examinations via an online environment. It can be done through the Internet/Intranet and Local Area Network environments. Some of the problems faced during manual examination systems are the delays occurred in result processing, filing poses a problem, filtering of records is difficult. The chance of loss of records is high also record searching is difficult. Maintenance of the system is also very difficult and takes lot of time and effort. Online examination is one of the crucial parts for online education system. It is efficient, fast enough and reduces the large amount of material resource. An examination system is developed based on the web. This paper describes the principle of the system, presents the main functions of the system, analyzes the auto-generating test. This can be used in educational institutions as well as in corporate world. It Can be used anywhere any time as it is a web based application (user location doesn’t matter). No restriction that examiner has to be present when the candidate takes the test.
+
+
+\end{@twocolumnfalse}]
+%\linenumbers
+%\modulolinenumbers[5]
+\onecolumn
+\newpage
+
+
+
+
+
+
+%............................index.....................!!!!!!!!!!!
+
+
+
+
+
+  \pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\tableofcontents
+
+  \pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\newpage
+
+
+
+
+
+%...................Introduction.................!!!!!!!!!!
+
+
+
+
+
+
+
+  \pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+%\part{Introduction}
+\vspace{10mm}
+\section{Introduction}
+
+Online Exams is being launched because a need for a destination that is beneficial for both institutes and students. 
+With this site, institutes can register and host online exams. Students can give exams and view their results. This site is an attempt to remove the existing flaws in the manual system of conducting exams.
+Online Exams System fulfills the requirements of the institutes to conduct the exams online.
+\vspace{5mm}
+\subsection{Need ?}
+The need of making this project called “Cloud Based Exam Portal” is to Students can give exam without the need of going to any physical destination. They can view the result at the same time.Thus the purpose of the site is to provide a system that saves the efforts and time of both the institutes and the students.
+
+\vspace{5mm}
+\subsection{Security}
+This application is very secure. Because the system is made in Spring Boot and Angular, this are the strong and very secured frameworks. We tried to make this site robust, reliable and it takes less bandwidth to move from one page to next page.
+We have also working on encryption decryption of the password using some technologies like JWT Authentication(JSON token).
+
+\vspace{5mm}
+\subsection{User friendly GUI}
+Here we making this system in the Angular so it give very great user friendly GUI that enables user to look and feel. It is attractive and easy to use. As we use the webframeworks it is easy for all user to surf through the site.
+\rhead{Cloud Based Exam Portal}
+
+\pagenumbering{arabic} 
+\cfoot{Fabtech Technical Campus, Sangola}
+\rfoot{Page \thepage}
+
+\newpage
+
+
+
+
+
+%...............Problem Statement and Scope.......!!!!!!!!!!!
+
+
+
+
+
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\section{Problem Statement and Scope}
+\vspace{10mm}
+\subsection{Problem Statement}
+Since the offline examination system has numerous 
+downsides, for example, trouble in investigating the 
+exam physically, more invigilators are needed to take a 
+test of numerous understudies.We are going to make an attractive examination portal in which user can create an account after which user have to sign in to attempt the test.
+Most of the currently existing portals we know have some problems like crashing or getting hanged
+\subsection{Scope}
+Steady improvement in innovation has prompted a fast 
+development of the evaluation business. Large numbers 
+of the training organizations and colleges are building 
+up their interest in web tests through online 
+assessment programming for their understudies rather 
+than pen and paper-based test. It demonstrates that 
+online assessment software is the future of evaluation 
+techniques. 
+\begin{itemize}
+ \item Conduct exams effortless.
+ \item Prevents cheatings.
+ \item Reduce administrative burden.
+ \item Keeps all records of User.
+\end{itemize}
+\newpage
+
+
+
+
+
+%................Literature Survey....................!!!!!!!!
+
+
+
+
+
+
+
+
+
+
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+  \section{Literature Survey}
+  \vspace{10mm}
+  \begin{tabular}{|p{0.9cm}|p{6cm}|p{2.4cm}|p{6cm}|}
+  \hline
+  Sr.No & Paper Name and Journal Name & Author Name & Description\\
+  \hline
+  01. & Online Examination Portal \cite{chauhan2008disease} & Niraj Sunil Bharambe, Sanjana Ramesh Bhangale  &  The Online Examination Portal is a web application 
+for to take online test in an efficient manner and no time wasting 
+for checking the paper. The main objective of Online Examination 
+Portal is to efficiently evaluate the candidate thoroughly through 
+a fully automated system that not only saves lot of time but also 
+gives fast results.  \\
+  \hline
+  02. & ONLINE EXAMINATION SYSTEM \cite{chen2017disease} & Deepankar Kotwal, Shubham  Bhadke, Aishwarya Gunjal, Puspendu Biswas & Online examination is one 
+of the crucial parts for online education system. It is 
+efficient, fast enough and reduces the large amount of 
+material resource. An examination system is 
+developed based on the web.\\
+   \hline
+   03. & Online Examination Portal  \cite{ferjanidisease} & Ashish srivastava, Niraj Tiwari, Shiv Ram Krishnan, Avinash Kumar.
+ & There are numerous benefits and disservices of an 
+online test. It is very well directed for distant 
+understudies that are primarily beneficial. The risks of 
+this online exam are the incapacity of invigilating.\\
+   \hline
+    \end{tabular} 
+    \newpage
+    
+    
+    %......................................................
+    
+    
+   \pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+
+  \begin{tabular}{|p{0.9cm}|p{6cm}|p{2.4cm}|p{6cm}|}
+  \hline
+   Sr.No & Paper Name and Journal Name & Author Name & Description\\
+   \hline
+    04. & 
+Online Examination System Portal \cite{kanchan2016study} & Ankit Agarwal, Sumit Kamble, Prof. Hirendra Hajare & In the wake of experiencing huge numbers of 
+reference papers at long last we are concluded that we can 
+manufactured one examination framework that can be give 
+easy to understand access to establish for directing exam 
+and investigation of result. \\
+    \hline
+ 05. & Web Based Online Examination System
+ \cite{9154130} & Shubham Bobde, Suraj Chaudhari, Jagupati Golguri, Prof. Rahul Shahane & . An examination system is develop base on the 
+internet. This paper delineate the system principle, presents the main intention of the system, analyzes the auto-create test paper 
+algorithm, and discourse the system security.\\  
+  \hline
+  \end{tabular}
+  \newpage
+  
+  
+  
+  
+  
+ 
+
+
+
+
+%........Software requirement and specification.....!!!!!!!!
+
+
+
+
+
+
+ \pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\section{Software requirement and specification}
+\vspace{10mm}
+The software requirements specification is produced at the culmination of the analysis task. The function and performance allocated to software as part of system engineering are refined by establishing a complete information description, a detailed functional and behavioral description, an indication of performance requirements and design constraints, appropriate validation criteria, and other data pertinent to requirements.
+ 
+ \vspace{5mm} 
+\subsection{Software requirement}
+\begin{itemize}
+ \item Java, Angular, Spring Boot 
+ \item Windows/Linux/Mac
+ \item MySQL Database
+\end{itemize}
+
+\subsection{Hardware requirement}
+\begin{itemize}
+ \item Hard Disk – 4 GB (minimum).
+ \item RAM – 4 GB (minimum).
+ \item Processor – Intel i3 or above.
+\end{itemize}
+
+  \newpage
+  
+  
+  
+  
+  
+%..................System Design.............!!!!!!!!!!!!
+  
+  
+  
+  
+  
+   
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\section{System Design}
+\vspace{10mm}
+\subsection{System Architecture}
+The administrator module and user modules include their part of functions to the Online Examination. The 
+initialization of the Online Examination is done by the ADMIN. The administrator adds registered information of the users to the 
+Online Examination system database and edited or deletes it as needed. The Coordinator inserts the questions to the question paper 
+of the Online Examination in subject wise manner. The question numbers are automatically generate. The complete subject wise 
+results of students can be viewed by the exam coordinator and administrator at any time after the completing the exam. The user 
+only have to login to attend the exam and after completing and submitting the exam the result is immediately generate.
+. 
+\begin{figure}[H]
+\begin{minipage}{1\textwidth}
+\includegraphics[width=17cm,height=12cm]{design/architecture.jpeg}
+\centering
+\caption {System Architecture Diagram}
+\end{minipage}
+\end{figure}
+\newpage
+
+\subsection{Data Flow}
+The dataflow diagram of the Cloud based exam portal consist of all the various aspects a normal flow diagram requires. The importance of the data flow diagram (DFD) for online examination system is to show the developers the actual happenings in the system. This is done by visualizing the system’s data management at various level.
+\begin{figure}[H]
+\begin{minipage}{1\textwidth}
+\includegraphics[width=17cm,height=12cm]{design/flow.jpeg}
+\centering
+\caption{Data Flow Diagram}
+\end{minipage}
+\end{figure}
+
+
+\newpage
+
+\subsection{Class Diagram}
+Cloud based exam portal consist of class diagram that all the other application that consists the basic class diagram, here the class diagram is the basic entity that is required in order to carry on with the project. Class diagram consist information about all the classes that is used and all the related datasets, and all the other necessary attributes and their relationships with other entities, all these information is necessary in order to use the concept of the prediction, where the user will enter all necessary information such as Category, Quize, Question.
+\begin{figure}[H]
+\begin{minipage}{1\textwidth}
+\includegraphics[width=17cm,height=12cm]{design/class2.jpeg}
+
+\centering
+\caption{Class Diagram}
+\end{minipage}
+\end{figure}
+
+
+\newpage
+\subsection{Sequence Diagram}
+The Sequence diagram of the project cloud based exam portal consist of all the various aspects a normal sequence diagram requires. This sequence diagram shows how from starting the model flows from one step to another, like he enter into the system then enters all the information’s.The Sequence diagram is usually referred to the 
+Interaction diagram. This form of diagram generally 
+deals with sequences that flow from one object to the 
+next. It is important to remember that the relationship 
+between the modules of the system matters when it 
+comes to implementation and execution.
+
+\begin{figure}[H]
+\begin{minipage}{1\textwidth}
+\includegraphics[width=17cm,height=12cm]{design/sequence.jpeg}
+\centering
+\caption{Sequence Diagram}
+\end{minipage}
+\end{figure}
+
+
+
+\newpage
+\subsection{Deployment Diagram}
+A deployment diagram shows the configuration of run time processing nodes and the components that live on them. Deployment diagrams is a kind of structure diagram used in modelling the physical aspects of an object-oriented system. Starting from the system how it processes the user entered information and then comparing that information with the help of datasets, then training and testing those data using the algorithms such as decision tree. Then finally processing all those data and information the system gives the desired result in the interface.
+\begin{figure}[H]
+\begin{minipage}{1\textwidth}
+\includegraphics[width=17cm,height=8cm]{design/depl.jpeg}
+\centering
+\caption{Deployment Diagram }
+\end{minipage}
+\end{figure}
+\newpage
+ %................Methodology / Techniques used 
+  
+  
+  
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\section{Methodology / Techniques used}
+\vspace{10mm}
+The entire development process has been subdivided into two: the front end development and the back end development model. The front end comprises of the visually visible parts such as the home page, profile, dashboard. The back end contains the database and its interaction with the front-end. 
+
+\subsection{Front End Development}
+The  front end was initially raw coded using Angular. Angular allows you to interface with other libraries and frameworks. Angular is a free and open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Google and a community of individual developers and companies. Angular can be used as a base in the development of single-page or mobile applications. Angular is a JavaScript library used in web development to build interactive elements on websites.Which easily deploy with any backend.
+\subsection{Back end Development}
+The back end we have used in this application is Spring Boot.  Spring Boot was designed to help developers take applications from concept to completion as quickly as possible. Spring Boot takes security seriously and helps developers avoid many common security mistakes. Some of the busiest sites on the Web leverage Spring Boot ability to quickly and flexibly scale. For the database we are using mysql database. MySQL creates a database for storing and manipulating data, defining the relationship of each table. Clients can make requests by typing specific SQL statements on MySQL. The server application will respond with the requested information and it will appear on the clients' side
+
+
+
+\newpage
+
+\newpage
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+
+
+\newpage
+
+
+%............Experimental results / Outputs.........!!!!!!!!
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\section{Experimental results / Outputs}
+\vspace{10mm}
+
+\begin{figure}[H]
+\begin{minipage}{\textwidth}
+\includegraphics[width=17cm,height=20cm]{admin/result1.jpeg}
+\centering
+\caption{Home Screen}
+\end{minipage}
+\end{figure}
+\newpage
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\hfill 
+\begin{figure}[H]
+\begin{minipage}{\textwidth}
+\includegraphics[width=17cm,height=15cm]{admin/result3.jpeg}
+\centering
+\caption{Register Page}
+\end{minipage}
+\end{figure}
+\newpage
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\hfill 
+\begin{figure}[H]
+\begin{minipage}{\textwidth}
+\includegraphics[width=17cm,height=15cm]{admin/result2.jpeg}
+\centering
+\caption{Login Page}
+\end{minipage}
+\end{figure}
+\newpage
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\hfill 
+\begin{figure}[H]
+\begin{minipage}{\textwidth}
+\includegraphics[width=17cm,height=15cm]{admin/result4.jpeg}
+\centering
+\caption{Profile page}
+\end{minipage}
+\end{figure}
+\newpage
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\hfill 
+\begin{figure}[H]
+\begin{minipage}{\textwidth}
+\includegraphics[width=17cm,height=15cm]{admin/result5.jpeg}
+\centering
+\caption{Show categories}
+\end{minipage}
+\end{figure}
+\newpage
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\hfill 
+\begin{figure}[H]
+\begin{minipage}{\textwidth}
+\includegraphics[width=17cm,height=15cm]{admin/result6.jpeg}
+\centering
+\caption{Categories Panell}
+\end{minipage}
+\end{figure}
+\newpage
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\hfill 
+\begin{figure}[H]
+\begin{minipage}{\textwidth}
+\includegraphics[width=17cm,height=15cm]{admin/result7.jpeg}
+\centering
+\caption{Show Quiz Page}
+\end{minipage}
+\end{figure}
+\newpage
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\hfill 
+\begin{figure}[H]
+\begin{minipage}{\textwidth}
+\includegraphics[width=17cm,height=15cm]{admin/result8.jpeg}
+\centering
+\caption{Quiz add Page}
+\end{minipage}
+\end{figure}
+\newpage
+
+
+
+
+%.............future Scope & Conclusion..........!!!!!!!!
+
+
+
+
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\section{Future Scope \& Conclusion}
+\vspace{10mm}
+\subsection{Future Scope}
+\begin{itemize}
+\item This application  will involves some features Voice acknowledgment.
+\item In future we can add many things like Fingerprint validation.
+\item This will be implemented Facial recognition acknowledgment.
+\end{itemize}
+\vspace{10mm}
+\subsection{Conclusion}
+With the use of this exam portal, we can moderately conclude that: It can help the authorization of the educational institution to maintain 
+the safety and integrity of its important data like record of attendance, exam results, etc. as the data shall instantly be transmitted 
+on the cloud wireless. The authorities not need to worry about misplacement pervert of attendance registers or exam registers, etc
+We have tried to implement an examination portal for those who want to give the exam online or want to practice for the competitions.
+When the user register on this portal the password is stored in the encrypted for using some algorithm. 
+User can take the test online of his/her choice regarding the field and see the progress according to the score card generated.
+
+\newpage
+
+
+
+
+
+  
+ %...............reference.................!!!!!!!!!!!!!!!!! 
+
+
+
+
+
+
+\pagestyle{fancy}
+\thisfancypage{%
+  \setlength{\fboxsep}{20pt}\doublebox}{}
+\section{References}
+\vspace{10mm}
+
+
+%To include References the right way (using Biblatex), search for a Bibtex generator on Google, and feed its output to a seperate Bibtex (Bib) file. Then we simply reference it in our main file and you will get the citations neatly ordered. If you want a quicker (improper hack), then just paste the results of the citation generator. \\
+\bibliographystyle{plain}
+\bibliography{model/bibo.bib}
+%Please note that the citation formats for different documents (articles, reports, dissertations,papers, conference proceedings) and organisations (ACM, IEEE) are different. Use a consistent style.
+\end{document}
